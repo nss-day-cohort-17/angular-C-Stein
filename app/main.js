@@ -28,6 +28,7 @@ app.config(($routeProvider) => {
     .then(function(val){
       console.log("list.json", val.data)
       $scope.list = val.data.list
+      //$scope.list.push("another thing!")
     })
 
   })
