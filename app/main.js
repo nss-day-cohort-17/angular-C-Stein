@@ -17,37 +17,22 @@ app.config(($routeProvider) => {
   })
 //create controller(s)- as many as your want!
   app.controller('MainCtrl', function ($scope, $http) {
-
-    $scope.myVariable = "here it is!"
+    console.log("main controller!")
+    $scope.myVariable = "my variable"
 
   })
   app.controller('ListCtrl', function ($scope, $http) {
 
-    console.log("list view!")
+    console.log("list controller!")
 
   })
 
 //create directives - as many as you want!
-app.directive("myTrophy", function() {
-  return {
-    restrict: "E",
-    templateUrl: "/partials/myTrophy.html"
-  }
+app.directive("myDirective", function() {
+  //I guess some code goes here
 });
 
 //create factories - as many as you want!
-app.factory('userEmail', function($sessionStorage) { 
-console.log("factory"); 
-return {
-  set: function(value) {
-    $sessionStorage.currentUser.email = value;
-  },
-  get: function() {
-    if ($sessionStorage.currentUser) {
-      return $sessionStorage.currentUser.email
-    } else {
-      return "New User"
-    }
-  }
-}
+app.factory('myFactory', function() {  
+  //I guess some code goes here
 });
