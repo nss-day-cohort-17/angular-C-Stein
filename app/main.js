@@ -17,13 +17,18 @@ app.config(($routeProvider) => {
   })
 //create controller(s)- as many as your want!
   app.controller('MainCtrl', function ($scope, $http) {
-
+    console.log("main controller!")
     $scope.myVariable = "here it is!"
 
   })
   app.controller('ListCtrl', function ($scope, $http) {
+    console.log("list controller!")
 
-    console.log("list view!")
+    $http.get(`list.json`)
+    .then(function(val){
+      console.log("list.json", val.data)
+      $scope.list = val.data.list
+    })
 
   })
 
