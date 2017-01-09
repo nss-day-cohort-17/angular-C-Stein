@@ -13,6 +13,13 @@ app.config(($routeProvider) => {
       .when('/list', {
         controller: 'ListCtrl',
         templateUrl: 'partials/list.html',
+      }) 
+      .when('/list/:someNumber', {
+        controller: 'ListCtrl',
+        templateUrl: 'partials/list.html',
+      })
+      .otherwise ({
+        redirectTo: '/'
       })
   })
 //create controller(s)- as many as your want!
@@ -21,8 +28,11 @@ app.config(($routeProvider) => {
     $scope.myVariable = "here it is!"
 
   })
-  app.controller('ListCtrl', function ($scope, $http) {
+  app.controller('ListCtrl', function ($scope, $http, $routeParams) {
     console.log("list controller!")
+
+    $scope.thatNumber = $routeParams.someNumber
+
 
     $http.get(`list.json`)
     .then(function(val){
