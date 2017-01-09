@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Angular Fun</title>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css"></link>
 </head>
 <body ng-app="nameOfApp">
-  
+  <div class="alwaysThere">
+    <h3>This div will always be seen since it is outside of the ng-view. Perfect place to include a navbar!</h3>
+  </div>
   <div ng-view></div>
+  <div class="alwaysThere">
+    <h3>This div will always be seen since it is outside of the ng-view. Perfect place for a footer.</h3>
+  </div>
   
   <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
   <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
