@@ -1,0 +1,3 @@
+app.directive("myDirective", function() {
+
+});
