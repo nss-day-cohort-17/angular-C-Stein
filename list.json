@@ -2,6 +2,7 @@
   "list": [
     "$http calls",
     "ng-repeat",
-    "ng-if"
+    "ng-if",
+    "orderBy???"
   ]
 }

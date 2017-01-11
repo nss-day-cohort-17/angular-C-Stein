@@ -20,6 +20,10 @@ app.config(($routeProvider) => {
     console.log("main controller!")
     $scope.myVariable = "here it is!"
 
+    $scope.onClickFunction = function(){
+      console.log("you clicked the button, didn't you?")
+    } 
+
   })
   app.controller('ListCtrl', function ($scope, $http) {
     console.log("list controller!")
@@ -34,26 +38,11 @@ app.config(($routeProvider) => {
   })
 
 //create directives - as many as you want!
-app.directive("myTrophy", function() {
-  return {
-    restrict: "E",
-    templateUrl: "/partials/myTrophy.html"
-  }
+app.directive("myDirective", function() {
+
 });
 
 //create factories - as many as you want!
-app.factory('userEmail', function($sessionStorage) { 
-console.log("factory"); 
-return {
-  set: function(value) {
-    $sessionStorage.currentUser.email = value;
-  },
-  get: function() {
-    if ($sessionStorage.currentUser) {
-      return $sessionStorage.currentUser.email
-    } else {
-      return "New User"
-    }
-  }
-}
+app.factory('myFactory', function($sessionStorage) { 
+
 });
