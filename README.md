@@ -4,7 +4,7 @@ Branches are used in the following order
 - master
 - superBasic: shows creation of an angular module, $scope, one controller and one partial
 - basic: angular app w/ routing and ng-view
-  -NSS students should be able to complete 
+  * NSS students should be able to complete 
     * [route routing](https://github.com/nashville-software-school/front-end-milestones/blob/master/6-modern-frameworks/exercises/1-basic/MF_ROUTE_ROUTING.md)
     * [route listing](https://github.com/nashville-software-school/front-end-milestones/blob/master/6-modern-frameworks/exercises/1-basic/MF_ROUTE_LISTING.md)
     * [user notes](https://github.com/nashville-software-school/front-end-milestones/blob/master/6-modern-frameworks/exercises/1-basic/MF_USER_NOTES.md) at this point  
