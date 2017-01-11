@@ -7,16 +7,18 @@
 </head>
 <body ng-app="nameOfApp">
   <div class="alwaysThere">
-    <h3>This div will always be seen since it is outside of the ng-view. Perfect place to include a navbar!</h3>
+    <h3>This div will always be seen since it is outside of the partial. Perfect place to include a navbar!</h3>
   </div>
-  <div ng-view></div>
+
+  <div ng-controller="MainCtrl">
+    <ng-include src="'partials/main.html'"></ng-include>
+  </div>
   <div class="alwaysThere">
-    <h3>This div will always be seen since it is outside of the ng-view. Perfect place for a footer.</h3>
+    <h3>This div will always be seen since it is outside of the partial. Perfect place for a footer.</h3>
   </div>
   
   <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
-  <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
   <script type="text/javascript" src="app/main.js"></script>
-  <!-- <script type="text/javascript" src=""></script> -->
+
 </body>
 </html>
