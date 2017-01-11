@@ -3,6 +3,8 @@
     "$http calls",
     "ng-repeat",
     "ng-if",
-    "orderBy???"
+    "filter",
+    "orderBy???",
+    "onCLick"
   ]
 }
