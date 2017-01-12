@@ -1,14 +1,15 @@
-  app.controller('ListCtrl', function ($scope, $http, $routeParams) {
+  app.controller('ListCtrl', function ($scope, $routeParams, myFactory) {
     console.log("list controller!")
 
     $scope.thatNumber = $routeParams.someNumber
 
+    console.log("myFactory", myFactory)
 
-    $http.get(`list.json`)
-    .then(function(val){
-      console.log("list.json", val.data)
-      $scope.list = val.data.list
-      //$scope.list.push("another thing!")
+    myFactory.then((val)=>{
+      console.log("then", val.list)
+      $scope.list = val.list
+      $scope.$apply()// triggers a digest cycle
     })
+
 
   })
