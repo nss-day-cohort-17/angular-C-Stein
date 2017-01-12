@@ -15,7 +15,7 @@
 <h3>MOAR Awesome things about angular</h3>
 <h5 ng-if="list.length == 3">There are three of them!</h5>
 <ul>
-  <li ng-repeat="listItem in list | filter: searchList | orderBy: 'name'">{{listItem}}</li>
+  <li ng-repeat="listItem in list | filter: searchList">{{listItem}}</li>
 </ul>
 
 
