@@ -37,12 +37,3 @@ app.config(($routeProvider) => {
 
   })
 
-//create directives - as many as you want!
-app.directive("myDirective", function() {
-
-});
-
-//create factories - as many as you want!
-app.factory('myFactory', function($sessionStorage) { 
-
-});
