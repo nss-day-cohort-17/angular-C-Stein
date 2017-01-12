@@ -6,16 +6,23 @@
   <link rel="stylesheet" type="text/css" href="styles/styles.css"></link>
 </head>
 <body ng-app="nameOfApp">
-  <div class="alwaysThere">
-    <h3>This div will always be seen since it is outside of the partial. Perfect place to include a navbar!</h3>
-  </div>
+  <div class="alwaysThere"></div>
 
   <div ng-controller="MainCtrl">
-    <ng-include src="'partials/main.html'"></ng-include>
+    <h1>This is the main view</h1>
+
+    <h3>Learning...</h3>
+    <ul>
+      <li>creating an angular module</li>
+      <li>using controllers</li>
+      <li>$scope!</li>
+    </ul>
+
+    <p>My Variable is {{myVariable}}</p>
+
+    <input type="text" name="myVariable" ng-model="myVariable" placeholder="the magic happens here">
   </div>
-  <div class="alwaysThere">
-    <h3>This div will always be seen since it is outside of the partial. Perfect place for a footer.</h3>
-  </div>
+  <div class="alwaysThere"></div>
   
   <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
   <script type="text/javascript" src="app/main.js"></script>
