@@ -21,18 +21,10 @@ app.config(($routeProvider) => {
     $scope.myVariable = "my variable"
 
   })
+  
   app.controller('ListCtrl', function ($scope, $http) {
 
     console.log("list controller!")
 
   })
 
-//create directives - as many as you want!
-app.directive("myDirective", function() {
-  //I guess some code goes here
-});
-
-//create factories - as many as you want!
-app.factory('myFactory', function() {  
-  //I guess some code goes here
-});
