@@ -13,3 +13,4 @@ Branches are used in the following order
 - extras: "otherwise" added to routing, and an example of $routeParams
   * NSS students should be able to complete the [mushroom exercise](https://github.com/nashville-software-school/front-end-milestones/blob/master/6-modern-frameworks/exercises/1-basic/MF_MUSHROOMS.md) at this point
 - modularity: broke controllers, directives, and factories into their own files and included them in index.html
+- factories: uusing a factory for $http call(s)
