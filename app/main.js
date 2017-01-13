@@ -3,8 +3,13 @@ console.log("main.js here")
 
 var app = angular.module('nameOfApp', ['ngRoute'])
 
+// appModule.config(['$locationProvider', function($locationProvider) {
+//   $locationProvider.hashPrefix('');
+// }]);
+
 //configure your app (once)
-app.config(($routeProvider) => {
+app.config(($routeProvider, $locationProvider) => {
+    $locationProvider.hashPrefix('');
     $routeProvider
       .when('/', {
         controller: 'MainCtrl',
