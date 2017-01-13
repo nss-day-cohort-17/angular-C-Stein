@@ -43,3 +43,4 @@ app.config(($routeProvider, $locationProvider) => {
       //$scope.list.push("another thing!")
     })
 
+})
