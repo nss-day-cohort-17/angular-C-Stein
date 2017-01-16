@@ -4,8 +4,8 @@ console.log("main.js here")
 var app = angular.module('nameOfApp', [])
 
 //create controller(s)- as many as your want!
-  app.controller('MainCtrl', function ($scope, $http) {
+  app.controller('MainCtrl', function ($scope) {
     console.log("main controller!")
-    $scope.myVariable = "my variable"
+    $scope.myVariable = "someone else's variable"
 
   })
