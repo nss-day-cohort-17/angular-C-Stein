@@ -19,7 +19,7 @@
 <h3>MOAR Awesome things about angular</h3>
 <h5 ng-if="list.length == 3">There are three of them!</h5>
 <ul>
-  <li ng-repeat="listItem in list">{{listItem}}</li>
+  <li ng-repeat="listItem in list"><a href="/#/list/{{listItem.id}}">{{listItem.item}}</a></li>
 </ul>
 
 
