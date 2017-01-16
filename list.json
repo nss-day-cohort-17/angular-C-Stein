@@ -1,7 +1,19 @@
 {
   "list": [
-    "$http calls",
-    "ng-repeat",
-    "ng-if"
+    {
+    "item": "$http calls",
+    "details": "gets information, returns a promise",
+    "id": 0
+    },
+    {
+    "item": "ng-repeat",
+    "details": "repeats items!",
+    "id": 1
+    },
+    {
+    "item": "ng-if",
+    "details": "it's 'if-then' logic in your HTML!",
+    "id": 2
+    }
   ]
 }
