@@ -16,31 +16,42 @@ app.config(($routeProvider, $locationProvider) => {
         controller: 'ListCtrl',
         templateUrl: 'partials/list.html',
       }) 
-      .when('/list/:someNumber', {
-        controller: 'ListCtrl',
-        templateUrl: 'partials/list.html',
+      .when('/list/:someVariable', {
+        controller: 'DetailCtrl',
+        templateUrl: 'partials/detail.html',
       })
       .otherwise ({
         redirectTo: '/'
       })
   })
 //create controller(s)- as many as your want!
-  app.controller('MainCtrl', function ($scope, $http) {
-    console.log("main controller!")
-    $scope.myVariable = "here it is!"
+app.controller('MainCtrl', function ($scope, $http) {
+  console.log("main controller!")
+  $scope.myVariable = "here it is!"
 
   })
-  app.controller('ListCtrl', function ($scope, $http, $routeParams) {
-    console.log("list controller!")
+app.controller('ListCtrl', function ($scope, $http) {
+  console.log("list controller!")
 
-    $scope.thatNumber = $routeParams.someNumber
+  $http.get(`list.json`)
+  .then(function(val){
+    console.log("list.json", val.data)
+    $scope.list = val.data.list
+    //$scope.list.push("another thing!")
+  })
+
+})
+
+app.controller('DetailCtrl', function($scope, $routeParams, $http){
+  console.log("detail controller!")
+  $scope.thatNumber = $routeParams.someVariable
 
 
-    $http.get(`list.json`)
-    .then(function(val){
-      console.log("list.json", val.data)
-      $scope.list = val.data.list
-      //$scope.list.push("another thing!")
-    })
+  $http.get(`list.json`)
+  .then(function(val){
+    console.log("list.json", val.data)
+    let list = val.data.list
+    $scope.selectedItem = list[$scope.thatNumber]
+  })
 
 })
