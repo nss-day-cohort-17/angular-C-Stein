@@ -16,7 +16,7 @@ app.config(($routeProvider) => {
       })
   })
 //create controller(s)- as many as your want!
-  app.controller('MainCtrl', function ($scope, $http) {
+  app.controller('MainCtrl', function ($scope) {
     console.log("main controller!")
     $scope.myVariable = "here it is!"
 
@@ -26,9 +26,13 @@ app.config(($routeProvider) => {
 
     $http.get(`list.json`)
     .then(function(val){
+      console.log("val", val)
       console.log("list.json", val.data)
       $scope.list = val.data.list
       //$scope.list.push("another thing!")
+    }, 
+    function(){
+      console.log("rejected!!")
     })
 
   })
