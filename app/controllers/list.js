@@ -5,10 +5,10 @@
 
     console.log("myFactory", myFactory)
 
-    myFactory.then((val)=>{
+    myFactory.getListItems()
+    .then((val)=>{
       console.log("then", val.list)
       $scope.list = val.list
-      $scope.$apply()// triggers a digest cycle
     })
 
 
